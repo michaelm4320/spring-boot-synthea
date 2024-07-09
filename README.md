@@ -56,11 +56,11 @@ spring.jpa.database-platform=org.hibernate.dialect.MySQLDialect`
 
 #### Implementing JDBC Connection
 
-Create a Java class for database connection (SpringBootSyntheaApplication.java).
-Use JDBC to connect to MySQL and retrieve data from the NAMES table.
+On your main spring boot application (SpringBootSyntheaApplication.java in this project), 
+use JDBC to connect to MySQL and retrieve data from the NAMES table.
 #### Running the Application
 
-Start the Spring Boot application using IntelliJ IDEA or Maven CLI (mvn spring-boot:run).
+Start the Spring Boot application using IntelliJ IDEA or Maven CLI (mvn.cmd spring-boot:run).
 Ensure MySQL server is running.
 Upon successful execution, the application will connect to the synthea database and print names from the NAMES table.
 Notes
