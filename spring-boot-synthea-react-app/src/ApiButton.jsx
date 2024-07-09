@@ -1,10 +1,14 @@
-// src/ApiButton.jsx
 import React from 'react';
 
 const ApiButton = () => {
   const handleClick = async () => {
     try {
-      const response = await fetch('/api/test');
+      const url = '/api/test';
+      console.log('Requesting URL:', url);
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
       const data = await response.json();
       console.log(data.message);
     } catch (error) {
