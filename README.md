@@ -67,3 +67,5 @@ Notes
 File Location: SpringBootSyntheaApplication.java is located in src/main/java/com/example/spring_boot_synthea/.
 Integration: This setup integrates Spring Boot with MySQL using JDBC for database connectivity.
 Documentation: Document these steps clearly in your project's README or documentation for future reference.
+
+Youtube Video Tutorial for datbase connection to intelliJ with Spring Boot: https://www.youtube.com/watch?v=9ntKSLLDeSs
