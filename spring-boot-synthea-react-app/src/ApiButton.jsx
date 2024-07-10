@@ -1,4 +1,5 @@
 import React from 'react';
+import './ApiButton.css';
 
 const ApiButton = () => {
   const handleClick = async () => {
@@ -16,10 +17,38 @@ const ApiButton = () => {
     }
   };
 
+    const handleGeneratePatient = async () => {
+    try {
+        const response = await fetch('http://localhost:8080/myendpoint/api/generate-patient', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            credentials: 'include', // Send cookies, required for CORS with credentials
+        });
+
+        if (!response.ok) {
+            throw new Error('Error generating patient');
+        }
+
+        const data = await response.json();
+        console.log('Generated patient:', data);
+    } catch (error) {
+        console.error('Error generating patient:', error);
+    }
+};
+
+
+
   return (
-    <button onClick={handleClick}>
-      Call API
-    </button>
+    <div className="buttons">
+      <button onClick={handleClick}>
+        Call API
+      </button>
+      <button onClick={handleGeneratePatient}>
+        Generate Patient Data
+      </button>
+    </div>
   );
 };
 
